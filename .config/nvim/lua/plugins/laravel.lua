@@ -1,0 +1,1 @@
+return { "adalessa/laravel.nvim" }
