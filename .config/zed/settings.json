@@ -1,136 +1,324 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Monospace Icon Theme - Dark",
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3.5-sonnet"
-    }
-  },
-  "context_servers": {
-    "mcp-server-context7": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {
-        "default_minimum_tokens": "10000"
-      }
-    }
-  },
-  "debugger": {
-    "dock": "right"
-  },
-  "git_panel": {
-    "dock": "right"
-  },
-  "search": {
-    "button": false,
-    "case_sensitive": true
-  },
-  "toolbar": {
-    "breadcrumbs": true,
-    "quick_actions": false,
-    "selections_menu": false
-  },
-  "preview_tabs": {
-    "enabled": false
-  },
-  "wrap_guides": [90],
-  "show_wrap_guides": true,
-  "cursor_blink": false,
-  "inlay_hints": {
-    "enabled": false
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "soft_wrap": "editor_width",
-  "ui_font_size": 14,
-  "ui_font_family": "FiraCode Nerd Font",
-  "buffer_font_size": 14,
-  "buffer_font_family": "FiraCode Nerd Font",
-  "base_keymap": "VSCode",
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Flexoki Dark"
-  },
-  "languages": {
-    "PHP": {
-      "language_servers": ["intelephense", "!phpactor", "..."],
-      "formatter": "language_server"
-    }
-  },
-  "file_types": {
-    "PHP": ["*.php"],
-    "Blade": ["*.blade.php"]
-  },
-  "notification_panel": {
-    "dock": "left"
-  },
-  "chat_panel": {
-    "button": "never",
-    "dock": "bottom"
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "project_panel": {
-    "dock": "right",
-    "indent_size": 10,
-    "hide_root": true
-  },
-  "terminal": {
-    "font_family": "FiraCode Nerd Font Mono",
-    "font_size": 12,
-    // Terminal line height: comfortable (1.618), standard(1.3) or `{ "custom": 2 }`
-    "line_height": "comfortable"
-  },
-  "minimap": {
-    "show": "always",
-    "thumb": "always",
-    "thumb_border": "left_open",
-    "current_line_highlight": null
-  },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    "**/CVS",
-    "**/.DS_Store",
-    "**/Thumbs.db",
-    "**/.classpath",
-    "**/.settings",
-    // above is default from Zed
-    "**/out",
-    "**/dist",
-    "**/.husky",
-    "**/.turbo",
-    "**/.vscode-test",
-    "**/.vscode",
-    "**/.next",
-    "**/.storybook",
-    "**/.tap",
-    "**/.nyc_output",
-    "**/report",
-    // Laravel
-    "**/node_modules",
-    "**/vendor"
-  ],
-  "diagnostics": {
-    "inline": {
-      "enabled": true,
-      "update_debounce_ms": 150,
-      "padding": 4,
-      "min_column": 0,
-      "max_severity": null
-    }
-  }
+	"ssh_connections": [
+		{
+			"host": "ia-prod",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/home/acidatama/work/ia-ims-preview"],
+				},
+			],
+		},
+	],
+	"prettier": {
+		"allowed": true,
+	},
+	"auto_signature_help": false,
+	"colorize_brackets": true,
+	"inlay_hints": {
+		"show_value_hints": true,
+		"scroll_debounce_ms": 50,
+		"show_background": true,
+		"enabled": true,
+	},
+	"indent_guides": {
+		"line_width": 2,
+		"active_line_width": 4,
+		"coloring": "fixed",
+		"background_coloring": "disabled",
+	},
+	"show_wrap_guides": true,
+	"gutter": {
+		"min_line_number_digits": 1,
+		"folds": false,
+		"breakpoints": false,
+		"runnables": true,
+	},
+	"drag_and_drop_selection": {
+		"enabled": false,
+	},
+	"agent": {
+		"default_profile": "minimal",
+		"default_model": {
+			"provider": "google",
+			"model": "gemini-3-pro-preview",
+		},
+		"enable_feedback": false,
+		"button": false,
+		"favorite_models": [],
+		"model_parameters": [],
+	},
+	"icon_theme": "Soft Charmed Icons",
+	"active_pane_modifiers": {
+		"inactive_opacity": 1.0,
+	},
+	"window_decorations": "client",
+	"tab_bar": {
+		"show_tab_bar_buttons": false,
+		"show_nav_history_buttons": false,
+		"show": true,
+	},
+	"diagnostics": {
+		"inline": {
+			"enabled": false,
+		},
+		"button": true,
+	},
+	"search": {
+		"button": false,
+	},
+	"debugger": {
+		"button": false,
+	},
+	"git_panel": {
+		"tree_view": true,
+		"button": false,
+		"default_width": 240.0,
+		"dock": "right",
+	},
+	"title_bar": {
+		"show_sign_in": true,
+		"show_onboarding_banner": true,
+		"show_menus": false,
+		"show_user_picture": false,
+		"show_user_menu": true,
+		"show_branch_icon": false,
+	},
+	"auto_install_extensions": {
+		"php": true,
+		"blade": true,
+		"env": true,
+		"tailwindcss": true,
+	},
+	"theme": {
+		"mode": "system",
+		"light": "Gruvbox Light Soft",
+		"dark": "0x96f Theme",
+	},
+	"buffer_font_family": "FiraCode Nerd Font Mono",
+	"buffer_font_size": 20,
+	"ui_font_size": 20,
+	"tab_size": 4,
+	"hard_tabs": true,
+	"soft_wrap": "editor_width",
+	"show_whitespaces": "selection",
+	"remove_trailing_whitespace_on_save": true,
+	"ensure_final_newline_on_save": true,
+	"format_on_save": "on",
+	"formatter": "prettier",
+	"languages": {
+		"Git Commit": {
+			"inlay_hints": {
+				"enabled": true,
+			},
+		},
+		"PHP": {
+			"inlay_hints": {
+				"enabled": false,
+				"show_background": false,
+				"show_type_hints": true,
+			},
+			"show_completion_documentation": false,
+			"tab_size": 4,
+			"hard_tabs": false,
+			"format_on_save": "on",
+			"formatter": {
+				"external": {
+					"command": "bash",
+					"arguments": [
+						"-c",
+						"cat > {buffer_path} && ./vendor/bin/pint --quiet {buffer_path} && cat {buffer_path}",
+					],
+				},
+			},
+			"language_servers": ["phpactor", "..."],
+		},
+		"JavaScript": {
+			"tab_size": 2,
+			"format_on_save": "on",
+		},
+		"TypeScript": {
+			"tab_size": 2,
+			"format_on_save": "on",
+		},
+		"Vue.js": {
+			"tab_size": 2,
+			"format_on_save": "on",
+		},
+		"CSS": {
+			"tab_size": 2,
+			"format_on_save": "on",
+		},
+		"JSON": {
+			"tab_size": 2,
+			"format_on_save": "on",
+		},
+	},
+	"lsp": {
+		"intelephense": {
+			"settings": {
+				"intelephense.files.associations": ["*.php", "*.blade.php"],
+				"intelephense.environment.phpVersion": "8.2.0",
+				"intelephense.stubs": [
+					"apache",
+					"bcmath",
+					"bz2",
+					"calendar",
+					"com_dotnet",
+					"Core",
+					"ctype",
+					"curl",
+					"date",
+					"dba",
+					"dom",
+					"enchant",
+					"exif",
+					"FFI",
+					"fileinfo",
+					"filter",
+					"fpm",
+					"ftp",
+					"gd",
+					"gettext",
+					"gmp",
+					"hash",
+					"iconv",
+					"imap",
+					"intl",
+					"json",
+					"ldap",
+					"libxml",
+					"mbstring",
+					"meta",
+					"mysqli",
+					"oci8",
+					"odbc",
+					"openssl",
+					"pcntl",
+					"pcre",
+					"PDO",
+					"pdo_ibm",
+					"pdo_mysql",
+					"pdo_pgsql",
+					"pdo_sqlite",
+					"pgsql",
+					"Phar",
+					"posix",
+					"pspell",
+					"readline",
+					"Reflection",
+					"session",
+					"shmop",
+					"SimpleXML",
+					"snmp",
+					"soap",
+					"sockets",
+					"sodium",
+					"SPL",
+					"sqlite3",
+					"standard",
+					"superglobals",
+					"sysvmsg",
+					"sysvsem",
+					"sysvshm",
+					"tidy",
+					"tokenizer",
+					"xml",
+					"xmlreader",
+					"xmlrpc",
+					"xmlwriter",
+					"xsl",
+					"Zend OPcache",
+					"zip",
+					"zlib",
+				],
+			},
+		},
+	},
+	"file_types": {
+		"Blade": ["blade.php"],
+		"Dockerfile": ["Dockerfile", "Dockerfile.*"],
+	},
+	"git": {
+		"git_gutter": "tracked_files",
+		"inline_blame": {
+			"show_commit_summary": false,
+			"enabled": true,
+			"delay_ms": 600,
+		},
+	},
+	"terminal": {
+		"button": true,
+		"alternate_scroll": "off",
+		"shell": {
+			"program": "/bin/zsh",
+		},
+		"font_family": "FiraCode Nerd Font Mono",
+		"font_size": 20,
+		"working_directory": "current_project_directory",
+	},
+	"project_panel": {
+		"show_diagnostics": "errors",
+		"starts_open": false,
+		"hide_hidden": false,
+		"hide_root": true,
+		"button": true,
+		"scrollbar": {
+			"show": "never",
+		},
+		"indent_size": 15.0,
+		"folder_icons": true,
+		"file_icons": true,
+		"entry_spacing": "standard",
+		"hide_gitignore": false,
+		"dock": "right",
+		"default_width": 240.0,
+	},
+	"outline_panel": {
+		"button": false,
+		"dock": "right",
+		"default_width": 240.0,
+	},
+	"collaboration_panel": {
+		"button": false,
+		"dock": "left",
+	},
+	"tabs": {
+		"git_status": true,
+		"close_position": "right",
+		"file_icons": true,
+	},
+	"scrollbar": {
+		"axes": {
+			"vertical": false,
+			"horizontal": false,
+		},
+		"show": "never",
+		"git_diff": true,
+	},
+	"vertical_scroll_margin": 10.0,
+	"relative_line_numbers": "wrapped",
+	"seed_search_query_from_cursor": "always",
+	"show_completions_on_input": true,
+	"show_completion_documentation": true,
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false,
+	},
+	"cursor_blink": false,
+	"vim_mode": true,
+	"vim": {
+		"use_system_clipboard": "never",
+	},
+	"autosave": "off",
+	"auto_update": true,
+	"toolbar": {
+		"agent_review": false,
+		"selections_menu": false,
+		"breadcrumbs": true,
+		"quick_actions": false,
+	},
+	"notification_panel": {
+		"button": false,
+	},
 }
