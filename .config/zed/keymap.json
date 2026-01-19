@@ -180,4 +180,33 @@
 			"space f": "workspace::ToggleRightDock",
 		},
 	},
+	{
+		"context": "ProjectPanel && not_editing",
+		"bindings": {
+			// https://github.com/zed-industries/zed/issues/4753
+			// https://github.com/zed-industries/zed/issues/4270
+			"escape": "project_panel::ToggleFocus",
+			"enter": "project_panel::Open",
+			"o": "project_panel::NewDirectory",
+			"a": "project_panel::NewFile",
+			"r": "project_panel::Rename",
+			"x": "project_panel::Cut",
+			"y": "project_panel::Copy",
+			"p": "project_panel::Paste",
+			"d": "project_panel::Delete",
+			// Directory expansion
+			"l": "project_panel::ExpandSelectedEntry",
+			"h": "project_panel::CollapseSelectedEntry",
+			// Move up and down
+			"j": "menu::SelectNext",
+			"k": "menu::SelectPrevious",
+			// "shift-d": "project_panel::Delete"
+		},
+	},
+	{
+		"context": "ProjectPanel",
+		"bindings": {
+			"r": null,
+		},
+	},
 ]
