@@ -89,6 +89,13 @@
 		"blade": true,
 		"env": true,
 		"tailwindcss": true,
+		"html": true,
+		"toml": true,
+		"dockerfile": true,
+		"vue": true,
+		"xml": true,
+		"docker-compose": true,
+		"0x96f": true,
 	},
 	"theme": {
 		"mode": "system",
