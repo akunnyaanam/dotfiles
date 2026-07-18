@@ -34,10 +34,23 @@ fp() {
     fi
 }
 
+# pass
+pass-fzf() {
+    local target
+    target=$(find ~/.password-store -name "*.gpg" | sed "s|${HOME}/.password-store/||; s|.gpg$||" | fzf)
+    if [ -n "$target" ]; then
+        pass -c "$target"
+    fi
+}
+
 # Zsh widget wrapper
 fp-widget() { fp; }
+pass-fzf-widget() { pass-fzf; }
 zle -N fp-widget
+zle -N pass-fzf
+
 bindkey '^g' fp-widget
+bindkey '^p' pass-fzf
 
 # Load and initialise completion system
 autoload -Uz compinit
