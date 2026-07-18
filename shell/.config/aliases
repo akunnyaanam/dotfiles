@@ -8,6 +8,7 @@ alias ll='ls -l'
 alias llah='ls -llah'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias cpwd='echo -n $(pwd) | wl-copy'
 
 alias s='sudo'
 
@@ -71,3 +72,7 @@ alias dotl="make -C ~/.config/dotfiles link"
 alias dotu="make -C ~/.config/dotfiles unlink"
 alias dotr="make -C ~/.config/dotfiles relink"
 alias dotc="make -C ~/.config/dotfiles check"
+
+# encryption
+alias gpgenc="gpg --symmetric --cipher-algo AES256"
+alias gpgdec="gpg --decrypt"

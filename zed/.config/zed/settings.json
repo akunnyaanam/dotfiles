@@ -5,8 +5,18 @@
       "settings": {
         "texlab": {
           "build": {
-            "onSave": true,
-            "forwardSearchAfter": true,
+            // "onSave": true,
+            // "forwardSearchAfter": true,
+            "executable": "latexmk",
+            "args": [
+              "-pdf",
+              "-f",
+              "synctex=1",
+              "-interaction=nonstopmode",
+              "-output-directory=build",
+              "main.tex"
+            ],
+            "onSave": true
           },
           "forwardSearch": {
             "executable": "zathura",
