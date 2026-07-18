@@ -64,3 +64,10 @@ alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart' 
 alias enable='sudo systemctl enable --now' 
 alias disable='sudo systemctl disable --now' 
+
+# Dotfiles management aliases
+alias dots="make -C ~/.config/dotfiles"
+alias dotl="make -C ~/.config/dotfiles link"
+alias dotu="make -C ~/.config/dotfiles unlink"
+alias dotr="make -C ~/.config/dotfiles relink"
+alias dotc="make -C ~/.config/dotfiles check"
