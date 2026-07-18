@@ -1,0 +1,4 @@
+# Edit this file to select packages to manage.
+# Comment out (#) or delete packages you do not want on this machine.
+zed
+shell

@@ -1,0 +1,14 @@
+# Default paths
+--dir=$HOME/.config/dotfiles
+--target=$HOME
+
+# Global ignores
+--ignore=.stowrc
+--ignore=.git
+--ignore=.gitignore
+--ignore=README.md
+--ignore=.DS_Store
+--ignore=Makefile
+
+# Verbosity level (useful for debugging links)
+--verbose=1

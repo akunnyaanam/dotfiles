@@ -1,4 +1,22 @@
 {
+  "theme": "Gray Chocolate Dark",
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": true,
+            "forwardSearchAfter": true,
+          },
+          "forwardSearch": {
+            "executable": "zathura",
+            "args": ["--synctex-forward", "%l:1:%f", "-x", "zed %%{input}:%%{line}", "%p"],
+          },
+        },
+      },
+    },
+  },
+  "cli_default_open_behavior": "existing_window",
   "preferred_line_length": 100,
   "soft_wrap": "bounded",
   "icon_theme": "Catppuccin Frappé",

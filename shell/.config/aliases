@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../../'
@@ -7,6 +5,7 @@ alias .4='cd ../../../../'
 alias l='ls -lah'
 alias la='ls -A'
 alias ll='ls -l'
+alias llah='ls -llah'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -55,3 +54,13 @@ alias chmod='chmod --preserve-root'
 alias src='source ~/.zshrc && echo "Zsh config reloaded!"'
 alias vsrc='nvim ~/.zshrc'
 alias valias='nvim ~/.config/aliases'
+alias dot='cd ~/.config/dotfiles'
+
+# Service
+alias service='sudo systemctl' 
+alias status='sudo systemctl status' 
+alias start='sudo systemctl start' 
+alias stop='sudo systemctl stop' 
+alias restart='sudo systemctl restart' 
+alias enable='sudo systemctl enable --now' 
+alias disable='sudo systemctl disable --now' 
