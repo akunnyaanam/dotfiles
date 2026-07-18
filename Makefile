@@ -8,9 +8,29 @@ else
     PACKAGES = $(shell find . -maxdepth 1 -type d -not -name '.' -not -name '.git' -exec basename {} \;)
 endif
 
-# Default target
+# Default target changed to helper manual
 .PHONY: all
-all: link
+all: helper
+
+# Target: Prints command manual and interactive options
+.PHONY: helper
+helper:
+	@echo "========================================================================"
+	@echo "                     DOTFILES MANAGEMENT MODULE                         "
+	@echo "========================================================================"
+	@echo "Usage: make <target>"
+	@echo ""
+	@echo "Available Targets:"
+	@echo "  profile   Scan root directory and generate local '.stow_profile'"
+	@echo "  link      Deploy active profile configurations as symlinks to ~"
+	@echo "  unlink    Purge deployed symlinks cleanly from ~"
+	@echo "  relink    Refresh deployment state (unlink followed by link)"
+	@echo "  clean     DESTRUCTIVELY DELETE PHYSICAL FILES/DEAD LINKS blocking Stow"
+	@echo "  check     Execute non-destructive dry run with high verbosity"
+	@echo "  helper    Display this command execution reference guide"
+	@echo "========================================================================"
+	@echo "Active Profile Packages: $(if $(PACKAGES),$(PACKAGES),[None Loaded])"
+	@echo "========================================================================"
 
 # Target: Generate or reset the profile file
 .PHONY: profile
