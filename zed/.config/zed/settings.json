@@ -1,5 +1,5 @@
 {
-  "theme": "Gray Chocolate Dark",
+  "theme": "Kokedera",
   "lsp": {
     "texlab": {
       "settings": {
@@ -29,7 +29,7 @@
   "cli_default_open_behavior": "existing_window",
   "preferred_line_length": 100,
   "soft_wrap": "bounded",
-  "icon_theme": "Catppuccin Frappé",
+  "icon_theme": "Kokedera Icons",
   "ui_font_family": "JetBrainsMono Nerd Font",
   "agent": {
     "default_width": 550.0,
