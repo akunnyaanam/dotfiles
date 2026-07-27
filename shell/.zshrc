@@ -38,8 +38,13 @@ fp() {
 pass-fzf() {
     local target
     target=$(find ~/.password-store -name "*.gpg" | sed "s|${HOME}/.password-store/||; s|.gpg$||" | fzf)
+    
     if [ -n "$target" ]; then
-        pass -c "$target"
+        if pass "$target" | grep -q "^otpauth://"; then
+            pass otp -c "$target"
+        else
+            pass -c "$target"
+        fi
     fi
 }
 
